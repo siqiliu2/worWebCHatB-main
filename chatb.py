@@ -45,7 +45,7 @@ def get_embedding(text):
     client = openai.OpenAI(api_key=openai_api_key)  # New API client
     response = client.embeddings.create(
         input=text,
-        model="text-embedding-ada-002"  # Use the Ada model for embeddings,
+        model="text-embedding-3-large"  # Use the model for embeddings,
     )
     return np.array(response.data[0].embedding)
 
